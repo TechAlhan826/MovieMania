@@ -1,0 +1,48 @@
+{
+  "name": "movie-mania_backend",
+  "version": "1.0.0",
+  "description": "Your Perfect Destiny To Explore Movies!",
+  "main": "server.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.ts",
+    "start": "node dist/server.js",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/TechAlhan826/MovieMania.git"
+  },
+  "keywords": [
+    "Movies",
+    "Flims",
+    "Reviews"
+  ],
+  "author": "MOHAMMED ALHAN",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TechAlhan826/MovieMania/issues"
+  },
+  "homepage": "https://github.com/TechAlhan826/MovieMania#readme",
+  "dependencies": {
+    "@prisma/client": "^6.3.1",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.7",
+    "bcryptjs": "^2.4.3",
+    "cookieparser": "^0.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.13.0",
+    "prisma": "^6.3.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "tsc": "^2.0.4",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
+  }
+}
