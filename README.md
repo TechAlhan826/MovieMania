@@ -1,6 +1,6 @@
 # **MovieMania – Your Perfect Destiny for Exploring Movies**  
 
-Welcome to **MovieMania**, a dynamic movie exploration platform where users can browse, review, and engage with movies effortlessly. This repository contains the **backend API** for MovieMania, built using **TypeScript, Express, Prisma, and MongoDB**.  
+Welcome to **MovieMania**, a dynamic movie exploration platform where users can browse, review, and engage with movies effortlessly. This repository contains the **backend API** for MovieMania, built using **TypeScript, Express, Prisma, Zod, and MongoDB**.  
 
 The **frontend** for this app is currently under development.  
 
@@ -16,8 +16,8 @@ The **frontend** for this app is currently under development.
 ---
 
 ## **🚀 Live Deployment**
-👉 **Backend API**: [Your Deployed API URL]  
-👉 **API Documentation**: [Swagger Docs URL]  
+👉 **Backend API**: **https://moviemania-ad6w.onrender.com** 
+👉 **API Documentation**: **https://moviemania-ad6w.onrender.com/docs**
 
 OR  
 
@@ -36,7 +36,7 @@ Follow the steps below to **run locally**.
 ## **🔧 Local Setup**
 ### **1️⃣ Clone the Repository**
 ```bash
-git clone https://github.com/your-repo/moviemania-backend.git
+git clone https://github.com/TechAlhan826/moviemania-backend.git
 cd moviemania-backend
 ```
 
@@ -48,6 +48,8 @@ npm install
 ### **3️⃣ Configure Environment Variables**
 Create a `.env` file in the root folder and set the following:
 ```env
+SITE_URL=http://localhost
+PORT=5173
 DATABASE_URL="mongodb+srv://your-mongo-url"
 TOKEN_SECRET="your-jwt-secret"
 SESSION_SECRET="your-session-secret"
@@ -71,28 +73,28 @@ The server should now be running at **http://localhost:3000**
 ### **🔑 Authentication**
 | Method | Endpoint         | Description |
 |--------|-----------------|-------------|
-| POST   | `/api/auth/register` | Register a new user |
-| POST   | `/api/auth/login`    | Login and get JWT token |
-| POST   | `/api/auth/logout`   | Logout and destroy session |
-| GET    | `/api/auth/authStatus` | Check user authentication |
+| POST   | `/auth/register` | Register a new user |
+| POST   | `/auth/login`    | Login and get JWT token |
+| GET   | `/auth/logout`   | Logout and destroy session |
+| GET    | `/auth/authStatus` | Check user authentication |
 
 ### **🎬 Movies**
 | Method | Endpoint         | Description |
 |--------|-----------------|-------------|
-| GET    | `/api/movies`   | Get all movies |
-| GET    | `/api/movies/:id` | Get movie details |
-| POST   | `/api/movies`   | Add a new movie (Admin) |
-| PUT    | `/api/movies/:id` | Update movie info (Admin) |
-| DELETE | `/api/movies/:id` | Remove a movie (Admin) |
+| GET    | `/movies`   | Get all movies |
+| GET    | `/movies/:id` | Get movie details |
+| POST   | `/movies`   | Add a new movie (Admin) |
+| PUT    | `/movies/:id` | Update movie info (Admin) |
+| DELETE | `/movies/:id` | Remove a movie (Admin) |
 
 ### **⭐ Reviews**
 | Method | Endpoint         | Description |
 |--------|-----------------|-------------|
-| GET    | `/api/reviews`   | Fetch all reviews |
-| GET    | `/api/reviews/:id` | Get a specific review |
-| POST   | `/api/reviews`   | Add a review (Requires Auth) |
-| PATCH  | `/api/reviews/:id/like` | Like a review |
-| DELETE | `/api/reviews/:id` | Delete review (Owner only) |
+| GET    | `movies/reviews`   | Fetch all reviews |
+| GET    | `movies/reviews/:id` | Get a specific review |
+| POST   | `movies/reviews`   | Add a review (Requires Auth) |
+| PATCH  | `movies/reviews/:id/like` | Like a review |
+| DELETE | `movies/reviews/:id` | Delete review (Owner only) |
 
 For a complete list, check **Swagger Docs**: [Swagger Docs URL]  
 
