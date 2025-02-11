@@ -2,6 +2,7 @@ import express, { json, urlencoded } from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import reviewRoutes from "../routes/reviewRoutes";
+import authRoutes from "../routes/authRoutes";
 import startSwagger from "../model/swagger";
 //import cookieParser from "cookie-parser";
 
@@ -24,6 +25,7 @@ startSwagger(app);
 app.get("/", (req, res)=>{
     res.send("<h1>Welcome To Movie Mania By Alhan Refer /docs To View The Api Docs</h1>")
 })
+app.use("/auth", authRoutes);
 app.use("/", reviewRoutes);
 
 
