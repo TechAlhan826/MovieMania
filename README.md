@@ -16,8 +16,8 @@ The **frontend** for this app is currently under development.
 ---
 
 ## **🚀 Live Deployment**
-👉 **Backend API**: [Your Deployed API URL]  
-👉 **API Documentation**: [Swagger Docs URL]  
+👉 **Backend API**: **https://moviemania-ad6w.onrender.com** 
+👉 **API Documentation**: **https://moviemania-ad6w.onrender.com/docs**
 
 OR  
 
@@ -36,7 +36,7 @@ Follow the steps below to **run locally**.
 ## **🔧 Local Setup**
 ### **1️⃣ Clone the Repository**
 ```bash
-git clone https://github.com/your-repo/moviemania-backend.git
+git clone https://github.com/TechAlhan826/moviemania-backend.git
 cd moviemania-backend
 ```
 
@@ -48,6 +48,8 @@ npm install
 ### **3️⃣ Configure Environment Variables**
 Create a `.env` file in the root folder and set the following:
 ```env
+SITE_URL=http://localhost
+PORT=5173
 DATABASE_URL="mongodb+srv://your-mongo-url"
 TOKEN_SECRET="your-jwt-secret"
 SESSION_SECRET="your-session-secret"
