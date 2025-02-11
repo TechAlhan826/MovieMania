@@ -3,7 +3,7 @@
 Welcome to **MovieMania**, a dynamic movie exploration platform where users can browse, review, and engage with movies effortlessly. This repository contains the **backend API** for MovieMania, built using **TypeScript, Express, Prisma, Zod, and MongoDB**.  
 
 The **frontend** for this app is currently under development.  
-
+If you face any issue while setup reach me out on insta
 ---
 
 ## **🌟 Features**
@@ -82,21 +82,20 @@ The server should now be running at **http://localhost:3000**
 | Method | Endpoint         | Description |
 |--------|-----------------|-------------|
 | GET    | `/movies`   | Get all movies |
-| GET    | `/movies/:id` | Get movie details |
-| POST   | `/movies`   | Add a new movie (Admin) |
-| PUT    | `/movies/:id` | Update movie info (Admin) |
-| DELETE | `/movies/:id` | Remove a movie (Admin) |
 
 ### **⭐ Reviews**
 | Method | Endpoint         | Description |
 |--------|-----------------|-------------|
 | GET    | `movies/reviews`   | Fetch all reviews |
 | GET    | `movies/reviews/:id` | Get a specific review |
-| POST   | `movies/reviews`   | Add a review (Requires Auth) |
+| POST   | `movies/postReview`   | Add a review (Requires Auth) |
+| PUT   | `movies/reviews/:id`   | Modify a review (Requires Auth) |
 | PATCH  | `movies/reviews/:id/like` | Like a review |
+| PATCH  | `movies/reviews/:id/dislike` | Unlike a review |
 | DELETE | `movies/reviews/:id` | Delete review (Owner only) |
+| GET  | `movies/reviews/:rating` | Filter reviews by rating (1-10) |
 
-For a complete list, check **Swagger Docs**: [Swagger Docs URL]  
+For a complete list, check **Swagger Docs**: **https://moviemania-ad6w.onrender.com/docs** 
 
 ---
 
@@ -119,7 +118,6 @@ Or for **Render**, push your code to GitHub and connect it via **Render Dashboar
 
 ## **📜 License**
 This project is licensed under **MIT License**.
-
 ---
 
 🎬 **Enjoy exploring movies with MovieMania!** 🚀  
