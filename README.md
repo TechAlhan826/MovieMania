@@ -1,6 +1,6 @@
 # **MovieMania – Your Perfect Destiny for Exploring Movies**  
 
-Welcome to **MovieMania**, a dynamic movie exploration platform where users can browse, review, and engage with movies effortlessly. This repository contains the **backend API** for MovieMania, built using **TypeScript, Express, Prisma, and MongoDB**.  
+Welcome to **MovieMania**, a dynamic movie exploration platform where users can browse, review, and engage with movies effortlessly. This repository contains the **backend API** for MovieMania, built using **TypeScript, Express, Prisma, Zod, and MongoDB**.  
 
 The **frontend** for this app is currently under development.  
 
@@ -73,28 +73,28 @@ The server should now be running at **http://localhost:3000**
 ### **🔑 Authentication**
 | Method | Endpoint         | Description |
 |--------|-----------------|-------------|
-| POST   | `/api/auth/register` | Register a new user |
-| POST   | `/api/auth/login`    | Login and get JWT token |
-| POST   | `/api/auth/logout`   | Logout and destroy session |
-| GET    | `/api/auth/authStatus` | Check user authentication |
+| POST   | `/auth/register` | Register a new user |
+| POST   | `/auth/login`    | Login and get JWT token |
+| GET   | `/auth/logout`   | Logout and destroy session |
+| GET    | `/auth/authStatus` | Check user authentication |
 
 ### **🎬 Movies**
 | Method | Endpoint         | Description |
 |--------|-----------------|-------------|
-| GET    | `/api/movies`   | Get all movies |
-| GET    | `/api/movies/:id` | Get movie details |
-| POST   | `/api/movies`   | Add a new movie (Admin) |
-| PUT    | `/api/movies/:id` | Update movie info (Admin) |
-| DELETE | `/api/movies/:id` | Remove a movie (Admin) |
+| GET    | `/movies`   | Get all movies |
+| GET    | `/movies/:id` | Get movie details |
+| POST   | `/movies`   | Add a new movie (Admin) |
+| PUT    | `/movies/:id` | Update movie info (Admin) |
+| DELETE | `/movies/:id` | Remove a movie (Admin) |
 
 ### **⭐ Reviews**
 | Method | Endpoint         | Description |
 |--------|-----------------|-------------|
-| GET    | `/api/reviews`   | Fetch all reviews |
-| GET    | `/api/reviews/:id` | Get a specific review |
-| POST   | `/api/reviews`   | Add a review (Requires Auth) |
-| PATCH  | `/api/reviews/:id/like` | Like a review |
-| DELETE | `/api/reviews/:id` | Delete review (Owner only) |
+| GET    | `movies/reviews`   | Fetch all reviews |
+| GET    | `movies/reviews/:id` | Get a specific review |
+| POST   | `movies/reviews`   | Add a review (Requires Auth) |
+| PATCH  | `movies/reviews/:id/like` | Like a review |
+| DELETE | `movies/reviews/:id` | Delete review (Owner only) |
 
 For a complete list, check **Swagger Docs**: [Swagger Docs URL]  
 
